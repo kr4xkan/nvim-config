@@ -3,6 +3,7 @@ require("plugins")
 local set = vim.opt
 local let = vim.g
 
+local os = vim.loop.os_uname().sysname
 
 -- General options
 set.expandtab = true
@@ -33,8 +34,19 @@ map("n", "L", ":BufferLineCycleNext<CR>", opts)
 map("n", "H", ":BufferLineCyclePrev<CR>", opts)
 map("n", "<leader>x", ":bdelete<CR>", opts)
 map("n", "<leader>X", ":bdelete!<CR>", opts)
-map("n", "<A-j>", ":m+<CR>", opts)
-map("n", "<A-k>", ":m--<CR>", opts)
+
+if os == "Darwin" then
+    map("n", "Ï", ":m+<CR>", opts)
+    map("n", "È", ":m--<CR>", opts)
+    map("v", "Ï", ":m '>+1<CR>gv=gv", opts)
+    map("v", "È", ":m '<-2<CR>gv=gv", opts)
+else
+    map("n", "<A-j>", ":m+<CR>", opts)
+    map("n", "<A-k>", ":m--<CR>", opts)
+    map("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+    map("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+end
+
 map("n", "gd", ":Lspsaga lsp_finder<CR>", opts)
 map("n", "gr", ":Lspsaga rename<CR>", opts)
 map("n", "gp", ":Lspsaga preview_definition<CR>", opts)

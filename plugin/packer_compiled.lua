@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/kr4xkan/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/Users/kr4xkan/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/Users/kr4xkan/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
@@ -129,10 +134,10 @@ _G.packer_plugins = {
     path = "/Users/kr4xkan/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
   },
-  ["null-ls.nvim"] = {
+  ["nvim-autopairs"] = {
     loaded = true,
-    path = "/Users/kr4xkan/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+    path = "/Users/kr4xkan/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
