@@ -13,26 +13,21 @@ db.custom_center = {
 		action = "SessionLoad",
 	},
 	{
-		icon = "  ",
-		desc = "Recently opened files                   ",
-		action = "DashboardFindHistory",
-		shortcut = "SPC f h",
-	},
-	{
 		icon = "  ",
 		desc = "Find  File                              ",
 		action = "Telescope find_files find_command=rg,--hidden,--files",
-		shortcut = "SPC f f",
+		shortcut = "SPC f",
 	},
 	{
 		icon = "  ",
 		desc = "File Browser                            ",
 		action = "Telescope file_browser",
-		shortcut = "SPC f b",
+		shortcut = "SPC Tab",
 	},
 	{
 		icon = "  ",
 		desc = "Open Personal dotfiles                  ",
-		action = "Telescope dotfiles path=" .. home .. "/.config",
+		action = "tabnew $MYVIMRC | tcd %:p:h",
+		shortcut = "SPC f d",
 	},
 }

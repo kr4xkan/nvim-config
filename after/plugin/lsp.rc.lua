@@ -55,4 +55,4 @@ local rt = {
 require("rust-tools").setup(rt)
 require("gitsigns").setup()
 require("nvim-autopairs").setup({})
-
+require("lspconfig").clangd.setup({})
