@@ -54,6 +54,7 @@ return require("packer").startup(function(use)
 	})
 	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
 	use("dstein64/vim-startuptime")
+    use("wakatime/vim-wakatime")
 
     if packer_bootstrap then
         require('packer').sync()
